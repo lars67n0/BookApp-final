@@ -20,5 +20,7 @@ namespace BookApp.Data
         [Required]
         [StringLength(1, ErrorMessage = "Cant Be Above 1 Characters")]
         public string SemesterYear { get; set; }
+
+        public virtual List<Class> Classes { get; set; }
     }
 }

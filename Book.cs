@@ -12,7 +12,6 @@ namespace BookApp.Data
         //Validations Added and tested
         public int Id { get; set; }
         [Required]
-        [Range(0,4, ErrorMessage ="Cant Use A number over x-x-x-x")]
         public int PublishYear { get; set; }
         [Required]
         public string AuthorName { get; set; }
@@ -20,5 +19,11 @@ namespace BookApp.Data
         public string Description { get; set; }
         [Required]
         public string Title { get; set; }
+
+        // Foreign Key
+        [Required]
+        public int ClassId { get; set; }
+        // Navigation Property
+        public virtual Class Class { get; set; }
     }
 }

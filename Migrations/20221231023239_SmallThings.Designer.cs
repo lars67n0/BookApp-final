@@ -4,14 +4,16 @@ using BookApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookApp.Data.Migrations
 {
     [DbContext(typeof(BookListAppDbContext))]
-    partial class BookListAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221231023239_SmallThings")]
+    partial class SmallThings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
